@@ -1,5 +1,5 @@
 import re
-from pyknp import KNP
+#from pyknp import KNP
 
 class ChunkExtractor:
 
@@ -84,12 +84,14 @@ class ChunkExtractor:
 
         ret = []
         return ret
+    """
         if len(text) > 1:
             result = self.knp.parse(text)
             for tag in result.tag_list():  # 各基本句へのアクセス
                 ret = ret + re.findall("<時制.+?>", tag.fstring)
                 ret = ret + re.findall("<モダリティ.+?>", tag.fstring)
         return ret
+    """
 
     """
     英語スペースを考慮した単語結合
